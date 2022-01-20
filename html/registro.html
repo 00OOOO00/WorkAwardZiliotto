@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" type="image/png" href="../img/iconoverde.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Corinthia:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <title>WORK AWARD - Usuarios</title>
+</head>
+<body>
+     
+<header>
+    <div>
+        <a href="../index.html"><img id="logo" src="../img/logoblanco.png" alt="Icono Work Award" dth="100" height="100"></a>
+    </div>
+
+     <!--BUSCADOR-->
+
+     <div id="buscador">
+        <form method="get" action="">
+          <div class="tb">
+            <div class="td"><input id="inputBuscador" type="text" placeholder="Buscar..." required></div>
+            <div class="td" id="s-cover">
+                <button id="buttonNav" type="submit">
+                    <div id="s-circle"></div>
+                    <span></span>
+                </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    
+    <!--EL MENU NO INCLUYE A LA PAGINA EN LA QUE ESTAMOS ACTUALMENTE-->
+    <nav>
+        <ul id="menunav">
+            <li>
+                <a href="../index.html">HOME</a>
+            </li>
+
+            <li>
+                <span class="separador"> | </span> <a href="usuarios.html">USUARIOS</a>
+            </li>
+
+            <li>
+                <span class="separador"> | </span> <a href="articulos.html">ARTICULOS</a>
+            </li>
+
+            <li>
+                <span class="separador"> | </span> <a href="contacto.html">CONTACTO</a>
+            </li>
+
+            <li>
+                <span class="separador">|||</span> <a href="prestadores.html">PRESTADORES</a>
+            </li>
+        </ul>
+    </nav>
+ 
+</header>
+
+<main>
+    <div id="registerMain">
+
+        <h3 id="tituloRegistro">REGISTRO DE NUEVO USUARIO</h3>
+
+        
+        <!--SECTOR DE REGISTRO DE NUEVOS USUARIOS-->
+
+        <div id="registroUsuario">
+
+            <h2>Por favor completa los siguientes datos...</h2>
+
+            <form action="" method="post">
+                <input id="inputLogin" type="text" name="nu" placeholder="Ingrese su nombre de usuario" required="required" />
+                <input id="inputLogin" type="password" name="np" placeholder="Ingrese su contraseña" required="required" />
+                <input id="inputLogin" type="text" name="nm" placeholder="Ingrese su correo electrónico" required="required" />
+                <input id="inputLogin" type="text" name="nb" placeholder="Ingrese su barrio" required="required" />
+                <br>
+                <p class="avisolegal">Los datos serán guardados a efectos de dar veracidad a las recomendaciones pero nunca serán compartidos con otros usuarios o prestadores</p>
+                <br>
+                <label for="Acepta">Acepto</label>
+                <input id="Acepta" type="checkbox" required="required">
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Registrarme</button>
+            </form>
+         
+        </div>
+
+
+
+    </div>
+</main>
+
+
+<footer>
+    <a id="ayuda" href="../html/ayuda.html">¿COMO FUNCIONA?</a>
+    <p>Powered by Oscar Ziliotto</p>
+    <div id="redes">
+        <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconIGwhite.png" alt="Icono IG" dth="100" height="100"></a>
+        <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconFBwhite.png" alt="Icono IG" dth="100" height="100"></a>
+        <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconWAwhite.png" alt="Icono IG" dth="100" height="100"></a>
+    </div>
+
+</footer>
+
+</body>
+</html>

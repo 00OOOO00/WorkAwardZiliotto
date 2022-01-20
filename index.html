@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" type="image/png" href="img/iconoverde.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Corinthia:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>WORK AWARD - Tu Asistente de Servicios</title>
+</head>
+
+<body>
+     
+<header id="headerIndex">
+    
+    <div>
+        <img id="logo" src="img/logoblanco.png" alt="Icono Work Award" dth="100">
+    </div>
+
+    <!--BUSCADOR-->
+
+    <div id="buscador">
+        <form method="get" action="">
+            <div class="tb">
+                <div class="td">
+                    <input id="inputBuscador" type="text" placeholder="Buscar..." required>
+                </div>
+                <div class="td" id="s-cover">
+                    <button id="buttonNav" type="submit">
+                        <div id="s-circle"></div>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!--NAVEGADOR (EL MENU NO INCLUYE A LA PAGINA EN LA QUE ESTAMOS ACTUALMENTE)-->
+    <nav>
+            <ul id="menunav">
+                <li>
+                <a href="html/usuarios.html" >USUARIOS</a>
+                </li>
+                <li>
+                    <span class="separador">|</span> <a href="html/articulos.html">ARTICULOS</a>
+                </li>
+
+                <li>
+                    <span class="separador">|</span> <a href="html/contacto.html">CONTACTO</a>
+                </li>
+
+                <li>
+                    <span class="separador">|</span> <a href="html/prestadores.html">PRESTADORES</a>
+                </li>
+            </ul>
+    </nav>
+ 
+</header>
+
+
+<main>
+
+    <div id="indexTitulos">
+      
+        <div id="presentacion">
+            <h1>CONOCE A TU ASISTENTE PERSONAL</h1>  
+            <br>
+            <article id="textoppal">
+                <p>Bienvenidos a una experiencia colaborativa que busca premiar a los mejores prestadores de servicios en base a tus recomendaciones positivas y darte la tranquilidad que buscas al contratarlos. Solo aceptamos valoraciones positivas porque creemos en el poder del silencio </p>
+            </article>
+            <h2 id="slogan">Si tu próximo prestador está en nuestra base de datos es porque lo hizo bien!</h2>
+        </div> 
+
+        <!--SECTOR DE INGRESO DE USUARIOS (recién con el ingreso de usuario y clave se daría acceso al HTML "USUARIOS" - pendiente-)-->
+        <div id="ingresoppal">
+            <h2>Ingreso</h2>
+            <form method="post">
+                <input id="inputLogin" type="text" name="u" placeholder="Nombre de Usuario" required="required" />
+                <input id="inputLogin" type="password" name="p" placeholder="Contraseña" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Entrar.</button>
+            </form>
+            <a href="html/registro.html" >Registrarme</a>
+        </div>
+    
+    </div>
+    <div id="sliderUsuario" class="slider">
+        <ul>
+            <li>
+                <a href="../html/usuarios.html">
+                    <h4>SERVICIOS PARA LA CONSTRUCCION</h4>
+                    <img src="img/ladrillos2.jpg" alt="Imagen pared de cemento">
+    
+                </a>
+            </li>
+            <li>
+                <a href="../html/usuarios.html">
+                    <H4>PISCINAS</H4>
+                    <img src="img/piscina2.jpg" alt="Imagen de piscina">
+                </a>
+            </li>
+            <li>
+                <a href="../html/usuarios.html">
+                    <H4>ALAMBRADO</H4>
+                    <img src="img/alambrado.jpg" alt="Imagen de alambrado">
+                </a>
+            </li>
+            <li>
+                <a href="../html/usuarios.html">
+                    <H4>PARQUIZACION</H4>
+                    <img src="img/Parque.jpg" alt="Imagen de cesped">
+                </a>
+            </li>
+            
+            <li>
+                <a href="../html/usuarios.html">
+                    <H4>MUELLES</H4>
+                    <img src="img/muelle.jpg" alt="Imagen de muelle">
+                </a>
+            </li>
+            
+            <li>
+                <a href="../html/usuarios.html">
+                    <H4>LIMPIEZA</H4>
+                    <img src="img/limpieza.jpg" alt="Imagen de persona limpiando">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</main>
+
+<footer id=footerIndex>
+
+    <a id="ayuda" href="html/ayuda.html">¿COMO FUNCIONA?</a>
+    <p>Powered by Oscar Ziliotto</p>
+    <div id="redes">
+        <a href="https://www.instagram.com/"><img id="iconRedes" src="img/iconIGwhite.png" alt="Icono IG" dth="100" height="100"></a>
+        <a href="https://www.instagram.com/"><img id="iconRedes" src="img/iconFBwhite.png" alt="Icono IG" dth="100" height="100"></a>
+        <a href="https://www.instagram.com/"><img id="iconRedes" src="img/iconWAwhite.png" alt="Icono IG" dth="100" height="100"></a>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+  
+</body>
+</html>

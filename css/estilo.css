@@ -991,7 +991,7 @@ fieldset legend{
             align-items: center;
             font-family:Arial;
             font-weight:bold;
-            font-size:12px;
+            font-size: 11px;
             text-decoration: none;
         }
 
@@ -1040,7 +1040,7 @@ fieldset legend{
     }
 
     #redes{
-        width: 6%;
+        width: 100px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

@@ -425,6 +425,7 @@ fieldset legend{
         font-size:14px;
         text-align: justify;
         justify-self: left;
+        transform: scale(0.66);
         /*margin:calc(50vh - 220px) auto;*/
     }
 
@@ -639,6 +640,7 @@ fieldset legend{
         font-size:14px;
         text-align: justify;
         justify-self: center;
+        transform: scale(0.8);
     }
 
     #contacto h2{
@@ -1174,6 +1176,7 @@ fieldset legend{
         grid-area: CM2;
         justify-self:right;
         position: relative; right: -300px;
+        z-index: 10;
     }
 
  
@@ -1191,6 +1194,26 @@ fieldset legend{
         font-size:14px;
         text-align: justify;
         justify-self: left;
+        transform: scale(1.0);
+    }
+
+    
+    #contacto{
+        /*position: absolute; top: 350px; left: 600px;*/
+        grid-area: CM3;
+        background:#e6e6e6;
+        border-radius:8px;
+        box-shadow:0 0 40px -10px #000;
+        margin:calc(50vh - 220px) auto;
+        padding:20px 30px;
+        max-width:calc(100vw - 40px);
+        font-family:'Montserrat',sans-serif;
+        color:#78788c;
+        font-size:14px;
+        text-align: justify;
+        justify-self: center;
+        transform: scale(1.0);
+
     }
 
     
@@ -1245,6 +1268,12 @@ fieldset legend{
         width: 50%;
         grid-area: CM2;
     }
+
+    
+    .cuadrointeractivo{
+        transform: scale(1.00);
+    }
+
 
 /* PROPIEDADES PAGINA AYUDA - DESKTOP*/
 

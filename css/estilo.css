@@ -8,7 +8,6 @@
         box-sizing: border-box;
 }
 
-
 body{
     display: grid;
     grid-template-columns: 100vw;
@@ -17,6 +16,7 @@ body{
                             "main"
                             "footer";
 }
+
 
 ::placeholder { /*color de la palabra "Buscar*/
     font-family: 'Roboto', sans-serif;
@@ -161,15 +161,18 @@ fieldset legend{
 /*PROPIEDADES GENERALES DEL HEADER*/
 
     header{
-        display: flex;
+        /*display: flex;
         justify-content:space-between;
         flex-direction: row;
+        
         align-items: center;
         background-color: #0f181f;
         width: 100%;
-        height: 60px;
+        height: 60px;*/
+        padding: 0 15px 0 15px;
         position: sticky; top: 0; z-index: 100;
         grid-area: header;
+        background-color: #0f181f;
     }
 
     #logo{
@@ -181,9 +184,8 @@ fieldset legend{
     /*PROPIEDADES DEL BUSCADOR*/
 
         #buscador { /*formato del contenedor de búsqueda*/
-            width: 30%;
-            padding: 5px;
-            /*margin: 10px auto 0 auto;*/
+            /*width: 350px;
+            margin: 10px auto 0 auto;*/
             background-color: #0f181f;
             border-radius: 20px;
             box-shadow: 0px 15px 40px #192935, 0 0 20px 10px #ffffffeb; /*da formato a la sombra en dos colores (eje X, eje Y, area de la sombra y color)*/
@@ -193,7 +195,7 @@ fieldset legend{
 
         #inputBuscador{ /*formato del input ANTES que se comience a escribir*/
             margin-left: 10px;
-            width: 100%;
+            width: 300px;
             height: 50px;
             font-size: 30px;
             line-height: 1;
@@ -219,30 +221,7 @@ fieldset legend{
             background-color: transparent;
         }
             
-    /*PROPIEDADES DEL NAVEGADOR*/
-        nav{
-            position: relative; right: 10px;
-            width: 25%;
-        }
 
-
-        #menunav li {
-            width: 25%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        #menunav li a{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            width:80%;    
-            color: #fff;
-            text-decoration: none;  
-        }
 
 /* PROPIEDADES GENERALES DEL PIE DE PAGINA */
 
@@ -394,11 +373,11 @@ fieldset legend{
     #userMain{
         display:grid;
         grid-template-columns: 100%;
-        grid-template-rows: 20% 80%;
+        grid-template-rows: 30% 70%;
         grid-template-areas:    "UM1"
                                 "UM2";
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
         background: url(../img/conectados.png) repeat;
         background-color:#e6e6e6;
         /*border-bottom:2px solid #1414db;*/
@@ -425,13 +404,15 @@ fieldset legend{
     #recomienda{
         grid-area: UM2;
         width: auto;
-        height: 90%;
+        height: 70%;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
         transform: scale(0.8);
     }
+
+
 
     .cuadrointeractivo{
         background:#e6e6e6;
@@ -444,7 +425,7 @@ fieldset legend{
         font-size:14px;
         text-align: justify;
         justify-self: left;
-        margin:calc(50vh - 220px) auto;
+        /*margin:calc(50vh - 220px) auto;*/
     }
 
 
@@ -844,6 +825,7 @@ fieldset legend{
         }
 
 
+
 }
     
 @media only screen and (min-width: 500px){ /*Tablet & +*/
@@ -860,9 +842,6 @@ fieldset legend{
 
     /* PROPIEDADES DEL ENCABEZADO */
 
-        header{
-                height: 80px;
-            }
 
             #logo{
                 padding-top: 7px;
@@ -909,7 +888,7 @@ fieldset legend{
             transition: 0.5s ease all;
         }
             
-        button span { /*propiedades del MANGO de la lupa*/
+        #btnspan { /*propiedades del MANGO de la lupa*/
             position: absolute;
             top: 50px;
             left: 30px;
@@ -922,8 +901,8 @@ fieldset legend{
             transition: 0.5s ease all;
         }
             
-        button span:before,
-        button span:after { /*formato del MANGO de la lupa*/
+        #btnspan:before,
+        #btnspan:after { /*formato del MANGO de la lupa*/
             content: "";
             position: absolute;
             bottom: 0;
@@ -954,18 +933,18 @@ fieldset legend{
             transform: rotateZ(0);
         }
             
-        #s-cover:hover button span:before {
+        #s-cover:hover #btnspan:before {
             bottom: 11px;
             transform: rotateZ(52deg);
         }
             
-        #s-cover:hover button span:after { /*propiedades de la linea de flecha de abajo*/
+        #s-cover:hover #btnspan:after { /*propiedades de la linea de flecha de abajo*/
             bottom: -11px;
             transform: rotateZ(-52deg);
         }
             
-        #s-cover:hover button span:before,
-        #s-cover:hover button span:after {
+        #s-cover:hover #btnspan:before,
+        #s-cover:hover #btnspan:after {
             right: 18px; /*posicion x*/
             width: 35px; /*largo de cada linea de flecha*/
             background-color: #fff;
@@ -974,11 +953,12 @@ fieldset legend{
 
         /* PROPIEDADES DEL NAVEGADOR - DESKTOP*/
 
-        nav{
+        /*nav{
             position: relative; right: 20px;
             width: 25%;
             height: 42%;
-        }
+        }*/
+
         #menunav {
             background-color: #0f181f;
             border-radius: 10px;
@@ -1142,7 +1122,7 @@ fieldset legend{
 
 /* PROPIEDADES DE PAGINA ARTICULOS - DESKTOP*/
 
-    #articleMain{
+   #articleMain{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 10% 90%;

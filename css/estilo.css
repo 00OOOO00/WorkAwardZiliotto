@@ -1,178 +1,89 @@
 
+/*PROPIEDADES GENERALES DE TODAS LAS PAGINAS*/
 
-/*RESETEO DE TODAS LAS PAGINAS (se llevan a cero)*/
-
-*{
+    *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-}
-
-body{
-    display: grid;
-    grid-template-columns: 100vw;
-    /*grid-template-rows: 100% 100% 100%;*/
-    grid-template-areas:    "header"
-                            "main"
-                            "footer";
-}
-
-
-::placeholder { /*color de la palabra "Buscar*/
-    font-family: 'Roboto', sans-serif;
-    /*-webkit-text-stroke: 0.1px white;*/
-    color: #4482af;
-    width: 100%;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    grid-area: main;
-}
-
-ul{
-    list-style-type: none; /*le quita las viñetas a las listas*/
-}
-
-h1{
-    color: rgb(211, 180, 7);
-    font-family: 'Bakbak One', cursive;
-    text-shadow: 2px 2px 2px rgb(0 0 0 / 75%);
-    font-size: 35px;
-    text-align: center;
-    width: 100%;
-}
-
-h3{
-    color: rgb(211, 180, 7);
-    font-family: 'Bakbak One', cursive;
-    text-shadow: 2px 2px 2px rgb(0 0 0 / 75%);
-    box-shadow: 0 0 50px -10px #000;
-    font-size: 25px;
-    width: 50%;
-    text-align: center;
-    /*position: absolute; top: 200px; left: 0px;*/
-}
-
-
-fieldset legend{
-    font-family: 'Bakbak One', cursive;
-    background: rgb(51, 51, 51);
-    font-size:20px;
-}
-
-.separador {
-    color:gray;    
-}
-
-.btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }
-.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; }
-.btn-large { padding: 9px 14px; font-size: 15px; line-height: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
-.btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
-.btn-primary, .btn-primary:hover { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); color: #ffffff; }
-.btn-primary.active { color: rgba(255, 255, 255, 0.75); }
-.btn-primary { background-color: #4a77d4; background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); background-image: linear-gradient(top, #6eb6de, #4a77d4); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  border: 1px solid #3762bc; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); }
-.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }
-
-.btn-block { width: 100%; display:block; }
-
-.boton2{
-    float:right;
-    margin: 5px;
-}
-
-#sliderUsuario{
-    grid-area: UM2;
-    height: 200px;
+        animation-duration: 2s;
     }
 
-
-.slider{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    border: 10px solid rgba(51,51,51,0.3);
-
-}
-
-.slider ul li a{
-    color: rgba(255, 255, 255, 0.842);
-    font-size: 25px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    text-shadow: 0 0 20px rgba(0,0,0,1.5);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    align-items: center;
- 
-}
-
-.slider ul li a h4{
-    font-size: 30px;
-    position:absolute;
-    top: 35px;
-    letter-spacing: 2px;
+    body{
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-areas:    "header"
+                                "main"
+                                "footer";
     }
 
+    ::placeholder {
+        font-family: 'Roboto', sans-serif;
+        color: #4482af;
+        width: 100%;
+    }
 
-.slider ul{
-    padding: 0;
-    display: flex;
-    width: 600%;
-    position: relative;
-    animation: cambio 30s infinite ease-in;
-}
+    main{
+        display: flex;
+        flex-direction: column;
+        grid-area: main;
+    }
 
-.slider li{
-    width: 100%;
-    list-style: none;
-}
+    ul{
+        list-style-type: none; /*le quita las viñetas a las listas*/
+    }
 
-.slider img{
-    width: 100%;
-}
+    h1{
+        color: rgb(211, 180, 7);
+        font-family: 'Bakbak One', cursive;
+        text-shadow: 2px 2px 2px rgb(0 0 0 / 75%);
+        font-size: 31px;
+        text-align: center;
+        width: 100%;
+    }
 
+    h3{
+        color: rgb(211, 180, 7);
+        font-family: 'Bakbak One', cursive;
+        text-shadow: 2px 2px 2px rgb(0 0 0 / 75%);
+        box-shadow: 0 0 50px -10px #000;
+        font-size: 25px;
+        width: 50%;
+        text-align: center;
+    }
 
-@keyframes cambio{
-    0% {margin-left: 0;}
-    14% {margin-left: 0;}
+    fieldset legend{
+        font-family: 'Bakbak One', cursive;
+        background: rgb(51, 51, 51);
+        font-size:20px;
+    }
 
-    16%{margin-left: -100%;}
-    30%{margin-left: -100%;}
+    .separador {
+        color:gray;    
+    }
 
-    32%{margin-left: -200%;}
-    46%{margin-left: -200%;}
+    .btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }
+    .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; }
+    .btn-large { padding: 9px 14px; font-size: 15px; line-height: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+    .btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
+    .btn-primary, .btn-primary:hover { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); color: #ffffff; }
+    .btn-primary.active { color: rgba(255, 255, 255, 0.75); }
+    .btn-primary { background-color: #4a77d4; background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); background-image: linear-gradient(top, #6eb6de, #4a77d4); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  border: 1px solid #3762bc; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); }
+    .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }
 
-    48%{margin-left: -300%;}
-    62%{margin-left: -300%;}
+    .btn-block { width: 100%; display:block; }
 
-    64%{margin-left: -400%;}
-    78%{margin-left: -400%;}
-
-    80%{margin-left: -500%;}
-    100%{margin-left: -500%;}
-}
-
+    .boton2{
+        float:right;
+        margin: 5px;
+    }
 
 
 /*PROPIEDADES GENERALES DEL HEADER*/
 
     header{
-        /*display: flex;
-        justify-content:space-between;
-        flex-direction: row;
-        
-        align-items: center;
-        background-color: #0f181f;
-        width: 100%;
-        height: 60px;*/
-        padding: 0 15px 0 15px;
         position: sticky; top: 0; z-index: 100;
         grid-area: header;
-        background-color: #0f181f;
+        background-color: rgba(14,24,31,0.7);
     }
 
     #logo{
@@ -181,46 +92,59 @@ fieldset legend{
         height: 45px;
     }
 
-    /*PROPIEDADES DEL BUSCADOR*/
-
-        #buscador { /*formato del contenedor de búsqueda*/
-            /*width: 350px;
-            margin: 10px auto 0 auto;*/
-            background-color: #0f181f;
-            border-radius: 20px;
-            box-shadow: 0px 15px 40px #192935, 0 0 20px 10px #ffffffeb; /*da formato a la sombra en dos colores (eje X, eje Y, area de la sombra y color)*/
-            transform: scale(0.4); /*reduce el tamaño original del elemento al ratio*/
-        }
+    #hamburguesa{
+        width: 55px;
+    }
 
 
-        #inputBuscador{ /*formato del input ANTES que se comience a escribir*/
-            margin-left: 10px;
-            width: 300px;
-            height: 50px;
-            font-size: 30px;
-            line-height: 1;
-        }
+/*PROPIEDADES GENERALES DEL BUSCADOR*/
 
-        .tb { /*Cuadro del buscador*/
-            display: table;
-            width: 100%;
-        }
+    #buscador { /*formato del contenedor de búsqueda*/
+        background-color: #0f181f;
+        border-radius: 20px;
+        width: auto;
+        box-shadow: 0px 15px 40px #192935, 0 0 20px 10px #ffffffeb; /*da formato a la sombra en dos colores (eje X, eje Y, area de la sombra y color)*/
+        transform: scale(0.5); /*reduce el tamaño original del elemento al ratio*/
+        display: grid;
+        grid-auto-columns: 80% 20%;
+        grid-template-areas: "buscar lupa";
+    }
+
+    #lupa{
+        grid-area: lupa;
+    }
+
+    #buscame{
+        grid-area: buscar;
+    }
+
+    #inputBuscador{ /*formato del input ANTES que se comience a escribir*/
+        margin-left: 10px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 1;
+        width: 190px;
+    }
+
+    .tb { /*Cuadro del buscador*/
+        display: table;
+        width: 80%;
+    }
             
-        .td {
-            display: table-cell;
-            vertical-align: middle;
-        }
+    .td {
+        display: table-cell;
+        vertical-align: middle;
+    }
             
-        input, 
-        button { /*da formato a la barra cuando se comienza a escribir*/
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            padding: 0;
-            margin: 0;
-            border: 0;
-            background-color: transparent;
-        }
-            
+    input, 
+    button { /*da formato a la barra cuando se comienza a escribir*/
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background-color: transparent;
+    }      
 
 
 /* PROPIEDADES GENERALES DEL PIE DE PAGINA */
@@ -249,6 +173,7 @@ fieldset legend{
 
     footer p{
         font-size: 10px;
+        margin: 0;
     }
 
     #iconRedes{
@@ -256,7 +181,19 @@ fieldset legend{
         width: 18px;
     }
 
-/* PROPIEDADES PAGINA INDEX*/
+
+/* PROPIEDADES GENERALES PAGINA INDEX*/
+
+    #bodyIndex{
+        background: url(../img/assistant.jpg) no-repeat;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: 55% 5%;
+        background-attachment: fixed;
+        color: white;
+        justify-content: center;
+        width: 100%;
+    }
 
     #indexTitulos{
         display: grid;
@@ -274,14 +211,11 @@ fieldset legend{
                                 "A5 A5 A5 A5 A5";
         width: 100vw;
         height: 90vh;
-        background: url(../img/assistant2.jpg) no-repeat;
-        background-size:cover;
     }
 
     #presentacion{
         padding-top: 20px;
         grid-area: A3;
-        /*position: absolute; top: 18%; left: 50%;*/
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -298,7 +232,7 @@ fieldset legend{
         background-color: rgba(0, 0, 0, 0.5);
         letter-spacing: 0.4px;
         text-align:justify;
-        font-size: 15px;
+        font-size: 13.9px;
         width: 100%;
         height: 200px;
         color: beige;
@@ -307,7 +241,6 @@ fieldset legend{
     #slogan{
         font-family: 'Roboto', sans-serif;
         font-weight:bold;
-        /*position:absolute; top: 450px; left: 1050px;*/
         text-align: center;
         text-shadow: 1px 1px 1px rgb(0 0 0 / 75%);
         padding-top: 10px;
@@ -315,9 +248,9 @@ fieldset legend{
         height: 100px;
         color: beige;
     }
-
     
     #ingresoppal{
+        transform: scale(0.8);
         grid-area: A5;
         background-color: #0f181f;
         border-radius: 10px;
@@ -327,13 +260,11 @@ fieldset legend{
         justify-content: space-around;
         align-items: center;
         font-family: 'Open Sans', sans-serif;
-        /*position: absolute; top: 650px; left: 1200px;*/
-        width: 350px;
-        height: 300px;
+        width: 300px;
+        height: 250px;
         text-align: center;
         justify-self: center;
         align-self: center;
-        transform: scale(0.8);
     }
 
     #ingresoppal a{
@@ -367,28 +298,102 @@ fieldset legend{
 
     #inputLogin:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
+    #sliderUsuario{
+        grid-area: UM2;
+        height: 120px;
+    }
+    
+    .slider{
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        border: 10px solid rgba(51,51,51,0.3);
+    }
+    
+    .slider ul li a{
+        color: rgba(255, 255, 255, 0.842);
+        font-size: 25px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        text-shadow: 0 0 20px rgba(0,0,0,1.5);
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        align-items: center;
+    }
+    
+    .slider ul li a h4{
+        font-size: 20px;
+        position:absolute;
+        top: 30px;
+        letter-spacing: 1px;
+    }
+        
+    .slider ul{
+        padding: 0;
+        display: flex;
+        width: 600%;
+        position: relative;
+        animation: cambio 30s infinite ease-in;
+    }
+    
+    .slider li{
+        width: 100%;
+        list-style: none;
+    }
+    
+    .slider img{
+        width: 100%;
+    }
+        
+    @keyframes cambio{
+        0% {margin-left: 0;}
+        14% {margin-left: 0;}
+    
+        16%{margin-left: -100%;}
+        30%{margin-left: -100%;}
+    
+        32%{margin-left: -200%;}
+        46%{margin-left: -200%;}
+    
+        48%{margin-left: -300%;}
+        62%{margin-left: -300%;}
+    
+        64%{margin-left: -400%;}
+        78%{margin-left: -400%;}
+    
+        80%{margin-left: -500%;}
+        100%{margin-left: -500%;}
+    }
 
-/* PROPIEDADES PAGINA USUARIOS*/
+
+/* PROPIEDADES GENERALES PAGINA USUARIOS*/
+
+    #bodyUsuarios{
+        background: url(../img/conectados.png) repeat;
+        background-size: 30%;
+        background-repeat: repeat;
+        background-position: 50% 5%;
+        background-attachment: fixed;
+        justify-content: center;
+    }
 
     #userMain{
         display:grid;
         grid-template-columns: 100%;
-        grid-template-rows: 30% 70%;
+        grid-template-rows: 25% 75%;
         grid-template-areas:    "UM1"
                                 "UM2";
         width: 100vw;
         height: 100vh;
-        background: url(../img/conectados.png) repeat;
-        background-color:#e6e6e6;
-        /*border-bottom:2px solid #1414db;*/
-        background-size:auto;
         align-items: center;
         justify-items: center;
     }
 
-
     #tituloUser{
         width: 100%;
+        animation-duration: 1s;
     }
 
     #solicitaPresupuesto{
@@ -398,7 +403,6 @@ fieldset legend{
         justify-content:center;
         align-items: center;
         height: 60%;
-        transform: scale(0.8);
     }
 
     #recomienda{
@@ -409,10 +413,8 @@ fieldset legend{
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
-        transform: scale(0.8);
+        transform: scale(1.1);
     }
-
-
 
     .cuadrointeractivo{
         background:#e6e6e6;
@@ -425,10 +427,8 @@ fieldset legend{
         font-size:14px;
         text-align: justify;
         justify-self: left;
-        transform: scale(0.66);
-        /*margin:calc(50vh - 220px) auto;*/
+        transform: scale(0.7);
     }
-
 
     #recomiendadatos{
         height: auto;
@@ -462,7 +462,6 @@ fieldset legend{
                                 "IG4 IG5 IG6";
     }
 
-
     #indexGaleria h2{
         grid-area: TIT;
         color: #042844;
@@ -473,7 +472,7 @@ fieldset legend{
         font-size: 18px;
         letter-spacing: 0.5px;
         text-align: center;
-        }
+    }
 
     #indexGaleria div h4{
         color: rgba(255, 255, 255, 0.842);
@@ -493,13 +492,13 @@ fieldset legend{
         justify-content: center;
         text-decoration: none;  
         width: 100%;
-        height: 100%;}
-
+        height: 100%;
+    }
     
     #indexGaleria div a h4:hover{
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #e6e6e6;
-            }
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #e6e6e6;
+    }
 
     #imgIG1{
         display: flex;
@@ -509,8 +508,7 @@ fieldset legend{
         background-size: cover;
         align-items: center;
         justify-content: center;
-         }
-
+    }
 
     #imgIG2{
         display: flex;
@@ -520,7 +518,7 @@ fieldset legend{
         background-size: cover;
         align-items: center;
         justify-content: center;
-         }
+    }
 
     #imgIG3{
         display: flex;
@@ -562,7 +560,17 @@ fieldset legend{
         justify-content: center;
     }
 
-/* PROPIEDADES DE PAGINA ARTICULOS*/
+
+/* PROPIEDADES GENERALES DE PAGINA ARTICULOS*/
+
+    #bodyArticulos{
+        background: url(../img/cemento.jpg) no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 5%;
+        background-attachment: fixed;
+        justify-content: center;
+    }
 
     #articleMain{
         display: grid;
@@ -573,8 +581,6 @@ fieldset legend{
                                 "AM3";
         width: 100vw;
         height: 90vh;
-        background: url(../img/cemento.jpg) no-repeat;
-        background-size: cover;
         align-items: center;
         justify-items: center;
     }
@@ -586,22 +592,38 @@ fieldset legend{
     #artVideo1{
         grid-area: AM2;
         width: 90%;
-        height: 200px;
+        height: 280px;  
+    }
+
+    #artVideo1 div h5{
+        font-size: 15px;  
+    }
+
+    #artVideo1 div p{
+        font-size: 13px;  
     }
 
     #artVideo2{
         grid-area: AM3;
         width: 90%;
-        height: 200px;
+        height: 280px;
+    }
+
+    #artVideo2 div h5{
+        font-size: 15px;  
+    }
+
+    #artVideo2 div p{
+        font-size: 13px;  
     }
 
     .videos{
         width: 100%;
         height: 100%;
-     }
+    }
 
 
-/*PROPIEDADES DE PAGINA CONTACTO*/
+/*PROPIEDADES GENERALES DE PAGINA CONTACTO*/
 
     #contactMain{
         display: grid;
@@ -611,12 +633,18 @@ fieldset legend{
                                 "CM3";
         width: 100vw;
         height: 90vh;
-        background-color: rgb(51, 51, 51);
-        /*background: url(../img/piscina.jpg) no-repeat;
-        background-size: cover;*/
         align-items: center;
     }
 
+    #bodyContacto{
+        background-color: rgb(51, 51, 51);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 5%;
+        background-attachment: fixed;
+        justify-content: center;
+    }
+    
     #contactMain h3{
         grid-area: CM1;
         width: 100%;
@@ -626,8 +654,7 @@ fieldset legend{
         display: none;
     }
 
-     #contacto{
-        /*position: absolute; top: 350px; left: 600px;*/
+    #contacto{
         grid-area: CM3;
         background:#e6e6e6;
         border-radius:8px;
@@ -678,7 +705,19 @@ fieldset legend{
         color:#78788c;
     }
 
-/* PROPIEDADES PAGINA PRESTADORES */
+
+/* PROPIEDADES GENERALES PAGINA PRESTADORES */
+
+    #bodyPrestadores{
+        background: url(../img/trabajadores2.jpg) no-repeat;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: 55% 0%;
+        background-attachment: fixed;
+        color: white;
+        justify-content: center;
+        width: 100%;
+    }
 
     #contratistMain{
         display: grid;
@@ -688,8 +727,6 @@ fieldset legend{
                                 "CM2";
         width: 100vw;
         height: 90vh;
-        background: url(../img/trabajadores2.jpg) no-repeat;
-        background-size: cover;
         align-items: center;
         justify-items: center;
     }
@@ -708,7 +745,18 @@ fieldset legend{
         font-size: small;
     }
 
-    /*PROPIEDADES PAGINA REGISTRO*/
+
+    /*PROPIEDADES GENERALES PAGINA REGISTRO*/
+
+    #bodyAyuda{
+        background: url(../img/registro.jpg) no-repeat;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: 55% 5%;
+        background-attachment: fixed;
+        justify-content: center;
+        width: 100%;
+    }
 
     #registerMain{
         display: grid;
@@ -718,13 +766,10 @@ fieldset legend{
                                 "RU2";
         width: 100vw;
         height: 90vh;
-        background: url(../img/registro.jpg) no-repeat;
-        background-size: cover;
         align-items: center;
         justify-items: center;
     }
 
-    
     #tituloRegistro{
         grid-area: RU1;
         width: 100%;
@@ -736,7 +781,6 @@ fieldset legend{
         width: 80%;
         font-family: 'Open Sans', sans-serif;
         color: #fff;
-
     }
 
     #registroUsuario h2{
@@ -750,7 +794,8 @@ fieldset legend{
         background: rgba(0, 0, 0, 0.5);
     }
 
-    /* PROPIEDADES DE PAGINA AYUDA*/
+
+    /* PROPIEDADES GENERALES DE PAGINA AYUDA*/
 
     #helpMain{
         width: 100vw;
@@ -767,6 +812,7 @@ fieldset legend{
     #tituloAyuda{
         grid-area: HM1;
         width: 100%;
+        z-index: 10;
     }
  
     #funcionamiento{
@@ -775,9 +821,9 @@ fieldset legend{
     }
 
     #funcionamiento p{
-        font-size: 13.5px;
+        font-size: 12px;
         text-align: justify;
-   }
+    }
 
     .funcionamiento{
         background-color: rgba(0,0,0,0.6);
@@ -787,52 +833,25 @@ fieldset legend{
         color: beige;
     }
 
-
-        .videoFondo{
-            position: fixed;
-            min-width: 100%;
-            min-height: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            z-index: -100;
-        }
+    .videoFondo{
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: -100;
+    }
            
 
-
-@media only screen and (max-width: 500px) { /*Mobile*/
-
-    #buscador { /*formato del contenedor de búsqueda*/
-        width: 100%;
-        padding: 1px;
-        }
-
-    #buscador { /*formato del contenedor de búsqueda*/
-        width: 100%;
-        padding: 1px;
-        }
-
-    /*PROPIEDADES DEL NAVEGADOR - MOBILE*/
-
-        #menunav {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-evenly;
-            align-items: center;
-            justify-items: center;
-            font-family:Arial;
-            font-weight:bold;
-            font-size:10px;
-            text-decoration: none;
-        }
-
-
+@media only screen and (max-width: 525px) { /*CONDICIONES MOBILE*/
 
 }
     
-@media only screen and (min-width: 500px){ /*Tablet & +*/
+@media only screen and (min-width: 525px){ /*CONDICIONES TABLET&+*/
 
-    /* PROPIEDADES DEL ENCABEZADO */
+
+    /* PROPIEDADES GENERALES RESPONSIVE DESKTOP*/
 
         h1{
             font-size: 44px;
@@ -842,25 +861,27 @@ fieldset legend{
             Font-size: 35px;
         }
 
-    /* PROPIEDADES DEL ENCABEZADO */
+
+    /* PROPIEDADES RESPONSIVE DESKTOP DEL ENCABEZADO*/
+
+        header{
+            padding: 0 15px 0 15px;
+        }
+
+        #logo{
+            padding-top: 7px;
+            padding-left: 15px;
+            height: 65px;
+        }
 
 
-            #logo{
-                padding-top: 7px;
-                padding-left: 20px;
-                height: 75px;
-            }
-
-        /* PROPIEDADES DEL BUSCADOR */
+        /* PROPIEDADES RESPONSIVE DESKTOP DEL BUSCADOR */
         
         #inputBuscador{ /*formato del input ANTES que se comience a escribir*/
             height: 65px;
             font-size: 40px;
+            width: 200px;
             line-height: 1;
-        }
-
-        #buscador { /*formato del contenedor de búsqueda*/
-            transform: scale(0.4); /*reduce el tamaño original del elemento al ratio*/
         }
 
         #s-cover {
@@ -953,7 +974,7 @@ fieldset legend{
         }
         
 
-        /* PROPIEDADES DEL NAVEGADOR - DESKTOP*/
+        /* PROPIEDADES RESPONSIVE DESKTOP DEL NAVEGADOR*/
 
         /*nav{
             position: relative; right: 20px;
@@ -994,303 +1015,267 @@ fieldset legend{
             
         }
 
-/* PROPIEDADES DEL PIE DE PAGINA - DESKTOP*/
 
-    footer{
-        padding: 30px;
-        font-family:Arial;
-        position: relative; bottom: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 50px;
-    }
+    /* PROPIEDADES RESPONSIVE DESKTOP DEL PIE DE PAGINA*/
 
-    footer a{
-        font-size:13px;
-    }
-
-    footer p{
-        font-size: 12px;
-    }
-
-
-    #iconRedes{
-        height: 27px;
-        width: 27px;
-    }
-
-    #redes{
-        width: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-
-
-
-/* PROPIEDADES PAGINA INDEX*/
-
-    #indexTitulos{
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 1fr);
-        grid-template-areas:    "A1 A1 A2 A2 A2 A3 A3 A3 A3 A3"
-                                "A1 A1 A2 A2 A2 A3 A3 A3 A3 A3"
-                                "A1 A1 A2 A2 A2 A3 A3 A3 A3 A3"
-                                "A1 A1 A2 A2 A2 A3 A3 A3 A3 A3"
-                                "A1 A1 A2 A2 A2 A3 A3 A3 A3 A3"
-                                "A4 A4 A2 A2 A2 A5 A5 A5 A5 A5"
-                                "A4 A4 A2 A2 A2 A5 A5 A5 A5 A5"
-                                "A4 A4 A2 A2 A2 A5 A5 A5 A5 A5"
-                                "A4 A4 A2 A2 A2 A5 A5 A5 A5 A5"
-                                "A4 A4 A2 A2 A2 A5 A5 A5 A5 A5";
-        width: 100vw;
-        height: 90vh;
-        background: url(../img/assistant2.jpg) no-repeat;
-        background-size: cover;
-    }
-
-    #presentacion{
-        padding-top: 20px;
-        grid-area: A3;
-        /*position: absolute; top: 18%; left: 50%;*/
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        align-self:center;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 90%;
-        height: 80%;
-    }
-
-    #textoppal{
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 0.5px;
-        background-color: rgba(0, 0, 0, 0.0);
-        width: 90%;
-        height: 200px;
-        color: beige;
-    }
-
-    #slogan{
-        font-family: 'Roboto', sans-serif;
-        font-weight:bold;
-        /*position:absolute; top: 450px; left: 1050px;*/
-        text-align: center;
-        padding-top: 10px;
-        width: 100%;
-        height: 100px;
-        color: beige;
-    }
-
-
-    #ingresoppal{
-        width: 450px;
-    }
-
-
-    #inputLogin:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
-
-    /*PROPIEDADES DE LA PAGINA USUARIOS - DESKTOP*/
-
-    #indexGaleria{
-        padding: 10px 100px 10px 100px;
-        row-gap: 15px;
-        column-gap: 15px;
-    }
-
-    #solicitaPresupuesto{
-        transform: scale(1.0);
-    }
-
-    #recomienda{
-        transform: scale(1.0);
-    }
-
-    #indexGaleria h2{
-        font-size: 30px;
-        letter-spacing: 0.5px;
+        footer{
+            padding: 30px;
+            font-family:Arial;
+            position: relative; bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
         }
 
-    #indexGaleria div h4{
-        color: rgba(0, 0, 0, 0.0);
-        text-shadow:none;
-        font-size: 20px;
-    }
+        footer a{
+            font-size:13px;
+        }
 
-/* PROPIEDADES DE PAGINA ARTICULOS - DESKTOP*/
+        footer p{
+            font-size: 12px;
+        }
 
-   #articleMain{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 10% 90%;
-        grid-template-areas:    "AM1 AM1"
-                                "AM2 AM3";
-        width: 100vw;
-        height: 90vh;
-        background: url(../img/cemento.jpg) no-repeat;
-        background-size: cover;
-        align-items: center;
-        justify-items: center;
-    }
+        #iconRedes{
+            height: 27px;
+            width: 27px;
+        }
+
+        #redes{
+            width: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
 
-    #artVideo1{
-        width: 600px;
-        height: 300px;
-    }
+    /* PROPIEDADES RESPONSIVE DESKTOP PAGINA INDEX*/
 
-    #artVideo2{
-        width: 600px;
-        height: 300px;
-    }
+        #ingresoppal{
+            transform: scale(1);
+        }
+
+        #indexTitulos{
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            grid-template-areas:    "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3"
+                                    "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3"
+                                    "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3"
+                                    "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3"
+                                    "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3"
+                                    "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
+                                    "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
+                                    "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
+                                    "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
+                                    "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5";
+            width: 100vw;
+            height: 90vh;
+        }
+
+        #presentacion{
+            padding-top: 20px;
+            grid-area: A3;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-self:center;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
+            height: 80%;
+        }
+
+        #textoppal{
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 0.5px;
+            background-color: rgba(0, 0, 0, 0.0);
+            width: 90%;
+            height: 200px;
+            color: beige;
+        }
+
+        #slogan{
+            font-family: 'Roboto', sans-serif;
+            font-weight:bold;
+            text-align: center;
+            padding-top: 10px;
+            width: 100%;
+            height: 100px;
+            color: beige;
+        }
+
+        #inputLogin:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+
+    /*PROPIEDADES RESPONSIVE DESKTOP DE LA PAGINA USUARIOS*/
+
+        #indexGaleria{
+            padding: 10px 100px 10px 100px;
+            row-gap: 15px;
+            column-gap: 15px;
+        }
+
+        #solicitaPresupuesto{
+            transform: scale(1.0);
+        }
+
+        #recomienda{
+            transform: scale(1.0);
+        }
+
+        #indexGaleria h2{
+            font-size: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        #indexGaleria div h4{
+            color: rgba(0, 0, 0, 0.0);
+            text-shadow:none;
+            font-size: 20px;
+        }
+
+        .slider ul li a h4{
+            font-size: 25px;
+            position:absolute;
+            top: 35px;
+            letter-spacing: 2px;
+            }
+
+
+    /* PROPIEDADES RESPONSIVE DESKTOP DE PAGINA ARTICULOS*/
+
+        #artVideo1{
+            width: 600px;
+            height: 300px;
+        }
+
+        #artVideo2{
+            width: 600px;
+            height: 300px;
+        }
+        
+
+    /*PROPIEDADES RESPONSIVE DESKTOP DE PAGINA CONTACTO*/
+
+        #contactMain{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 10% 90%;
+            grid-template-areas:    "CM1 CM1"
+                                    "CM2 CM3";
+            width: 100vw;
+            height: 90vh;
+            background-color: rgb(51, 51, 51);
+            align-items: center;
+        }
+
+        #contactMain h3{
+            grid-area: CM1;
+            width: 100%;
+        }
+
+        #imgcontacto{
+            display: unset;
+            grid-area: CM2;
+            justify-self:center;
+            z-index: 10;
+        }
+
+        #contacto{
+            grid-area: CM3;
+            background:#e6e6e6;
+            border-radius:8px;
+            box-shadow:0 0 40px -10px #000;
+            margin:calc(50vh - 220px) auto;
+            padding:20px 30px;
+            max-width:calc(100vw - 40px);
+            font-family:'Montserrat',sans-serif;
+            color:#78788c;
+            font-size:14px;
+            text-align: justify;
+            justify-self: left;
+            transform: scale(1.0);
+        }
+        
+        #contacto{
+            grid-area: CM3;
+            background:#e6e6e6;
+            border-radius:8px;
+            box-shadow:0 0 40px -10px #000;
+            margin:calc(50vh - 220px) auto;
+            padding:20px 30px;
+            max-width:calc(100vw - 40px);
+            font-family:'Montserrat',sans-serif;
+            color:#78788c;
+            font-size:14px;
+            text-align: justify;
+            justify-self: center;
+            transform: scale(1.0);
+        }
+        
+        #contacto h2{
+            margin:10px 0;
+            padding-bottom:10px;
+            width:140px;
+            color:#6c6c7c;
+            font-size:25px;
+        }
+
+        #inputContacto{
+            width:100%;
+            padding:10px;
+            box-sizing:border-box;
+            background:none;
+            outline:none;
+            resize:none;
+            border:0;
+            font-family:'Montserrat',sans-serif;
+            transition:all .3s;
+            border-bottom:2px solid #bebed2;
+            background-color:#e6e6e6;
+        }
+
+        #pContacto:before{
+            content:attr(type);
+            display:block;
+            margin:28px 0 0;
+            font-size:14px;
+            font-weight: bold;
+            color:#78788c;
+        }
+
+
+    /* PROPIEDADES RESPONSIVE DESKTOP PAGINA PRESTADORES*/
+
+        #registroPrestador{
+            width: 50%;
+            grid-area: CM2;
+        }
+        
+        .cuadrointeractivo{
+            transform: scale(1.00);
+        }
+
+
+    /* PROPIEDADES RESPONSIVE DESKTOP PAGINA AYUDA*/
+
+        #funcionamiento p{
+            font-size: 20px;
+            text-align: justify;
+        }
     
-
-/*PROPIEDADES DE PAGINA CONTACTO - DESKTOP*/
-
-    #contactMain{
-        display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 10% 90%;
-        grid-template-areas:    "CM1 CM1"
-                                "CM2 CM3";
-        width: 100vw;
-        height: 90vh;
-        background-color: rgb(51, 51, 51);
-        /*background: url(../img/piscina.jpg) no-repeat;
-        background-size: cover;*/
-        align-items: center;
-    }
-
-    #contactMain h3{
-        grid-area: CM1;
-        width: 100%;
-    }
-
-    #imgcontacto{
-        display: unset;
-        grid-area: CM2;
-        justify-self:right;
-        position: relative; right: -300px;
-        z-index: 10;
-    }
-
- 
-    #contacto{
-        /*position: absolute; top: 350px; left: 600px;*/
-        grid-area: CM3;
-        background:#e6e6e6;
-        border-radius:8px;
-        box-shadow:0 0 40px -10px #000;
-        margin:calc(50vh - 220px) auto;
-        padding:20px 30px;
-        max-width:calc(100vw - 40px);
-        font-family:'Montserrat',sans-serif;
-        color:#78788c;
-        font-size:14px;
-        text-align: justify;
-        justify-self: left;
-        transform: scale(1.0);
-    }
-
-    
-    #contacto{
-        /*position: absolute; top: 350px; left: 600px;*/
-        grid-area: CM3;
-        background:#e6e6e6;
-        border-radius:8px;
-        box-shadow:0 0 40px -10px #000;
-        margin:calc(50vh - 220px) auto;
-        padding:20px 30px;
-        max-width:calc(100vw - 40px);
-        font-family:'Montserrat',sans-serif;
-        color:#78788c;
-        font-size:14px;
-        text-align: justify;
-        justify-self: center;
-        transform: scale(1.0);
-
-    }
-
-    
-    #contacto h2{
-        margin:10px 0;
-        padding-bottom:10px;
-        width:140px;
-        color:#6c6c7c;
-        font-size:25px;
-    }
-
-    #inputContacto{
-        width:100%;
-        padding:10px;
-        box-sizing:border-box;
-        background:none;
-        outline:none;
-        resize:none;
-        border:0;
-        font-family:'Montserrat',sans-serif;
-        transition:all .3s;
-        border-bottom:2px solid #bebed2;
-        background-color:#e6e6e6;
-    }
-
-    #pContacto:before{
-        content:attr(type);
-        display:block;
-        margin:28px 0 0;
-        font-size:14px;
-        font-weight: bold;
-        color:#78788c;
-    }
-
-/* PROPIEDADES PAGINA PRESTADORES - DESKTOP*/
-
-    #contratistMain{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 10% 90%;
-        grid-template-areas:    "CM1"
-                                "CM2";
-        width: 100vw;
-        height: 90vh;
-        background: url(../img/trabajadores2.jpg) no-repeat;
-        background-size: cover;
-        align-items: center;
-        justify-items: center;
-    }
-
-    #registroPrestador{
-        width: 50%;
-        grid-area: CM2;
-    }
-
-    
-    .cuadrointeractivo{
-        transform: scale(1.00);
-    }
+        .funcionamiento{
+            font-size: 25px;
+        }
 
 
-/* PROPIEDADES PAGINA AYUDA - DESKTOP*/
+    /*PROPIEDADES RESPONSIVE DESKTOP PAGINA REGISTRO*/
 
-    #funcionamiento p{
-        font-size: 20px;
-        text-align: justify;
-   }
- 
-   .funcionamiento{
-        font-size: 25px;
-    }
-
-    /*PROPIEDADES PAGINA REGISTRO*/
-
-    #registroUsuario{
-        width: 35%;
-    }
+        #registroUsuario{
+            width: 35%;
+        }
 
         .output {
             background: #eee;

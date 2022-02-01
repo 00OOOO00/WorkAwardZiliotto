@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,139 +13,115 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Corinthia:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>WORK AWARD - Usuarios</title>
 </head>
-<body>
-     
-    <header>
 
+<body id="bodyArticulos">
+     
+    <header class="animate__animate animate__fadeInDown">
+    
         <nav class="navbar navbar-expand-lg navbar-dark">
-        
-            <div class="container-fluid">
-    
-                <a class="navbar-brand col" href="../index.html"><img id="logo" src="../img/logoblanco.png" alt="Icono Work Award" dth="100" height="100"></a>
-                <!--<a class="navbar-brand" href="#">Navbar</a>-->
-               
-                <!--BUSCADOR-->
-    
-                <div id="buscador" class="col">
-                    <form method="get" action="">
-                        <div class="tb">
-                            <div class="td">
-                                <input id="inputBuscador" type="text" placeholder="Buscar..." required>
-                            </div>
-                            <div class="td" id="s-cover">
-                                <button id="buttonNav" type="submit">
-                                    <div id="s-circle"></div>
-                                    <span id="btnspan"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
+            
+            <!--LOGO CON LINK-->
+            <div id="divLogo" class="col-3 col-sm-2 container justify-content-start">
+                <a class="navbar-brand" href="../index.html"><img id="logo" src="../img/logoblanco.png" alt="Icono Work Award" dth="100" height="100"></a>
             </div>
     
-                <!--NAVEGADOR-->
+            <!--BUSCADOR-->
+            <div id="buscador" class="col-4 col-sm-3 justify-content-center">
+                <form method="get" action="">
+                    <div class="tb">
+                        <input id="inputBuscador" type="text" placeholder="Buscar..." required>
+                        
+                        <div class="td" id="s-cover">
+                            <button id="buttonNav" type="submit">
+                                <div id="s-circle"></div>
+                                <span id="btnspan"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
                 
+            <!--NAVEGADOR-->
+            <div class="col-5 col-sm-2 justify-content-end collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/usuarios.html">USUARIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/articulos.html">ARTICULOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/contacto.html">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/prestadores.html">PRESTADORES</a>
+                    </li>
+                </ul>
+            </div>
     
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/usuarios.html">USUARIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/articulos.html">ARTICULOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/contacto.html">CONTACTO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/prestadores.html">PRESTADORES</a>
-                        </li>
-                    </ul>
-                </div>
+            <!--(menu hamburguesa del navegador)-->
+            <button id="hamburguesa" class="col-3 col-sm-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             
-    
-          </nav>
-     
+        </nav>
+         
     </header>
 
-<main>
 
-    <div id="articleMain">
-    
-        <h3>ARTICULOS DE INTERES</h3>
+    <main>
 
-        <!--ARTICULOS DE PRENSA ESCRITA-->
-
-        <!--VIDEOS-->
+        <div id="articleMain">
         
-        <div id="artVideo1" class="card text-white bg-dark mb-3">
-            <iframe class="videos" 
-            src="https://www.youtube.com/embed/e8kBEjG_CcA" 
-            title="Como Evitar Estafas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <!--<img src="..." class="card-img-top" alt="...">-->
-            <div class="card-body">
-              <h5 class="card-title">Como Seleccionar a un Contratista</h5>
-              <p class="card-text">En este video te explicamos que debes tener en cuenta al momento de seleccionar a un contratista.</p>
-              <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-            </div>
-          </div>
+            <h3>ARTICULOS DE INTERES</h3>
 
-        <!--<div id="artVideo1" class="col">
-            <iframe class="videos" 
+            <!--VIDEOS-->
+            
+            <div id="artVideo1" class="animate__animate animate__fadeInLeft card text-white bg-dark mb-3">
+                <iframe class="videos" 
                 src="https://www.youtube.com/embed/e8kBEjG_CcA" 
-                title="Como Seleccionar a un Contratista" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <p class="card-text">En este video te explicamos que debes tener en cuenta al momento de seleccionar a un contratista.</p>
-        </div>-->
-
-        <div id="artVideo2" class="card text-white bg-dark mb-3">
-            <iframe class="videos" 
-            src="https://www.youtube.com/embed/tvgIhkfGGQg" 
-            title="Como Evitar Estafas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-            <!--<img src="..." class="card-img-top" alt="...">-->
-            <div class="card-body">
-              <h5 class="card-title">Como Evitar Estafas</h5>
-              <p class="card-text">Manejarse a traves de recomendaciones es siempre una garantía porque las estafas no están ausentes en la prestación de servicios. Enterate sobre como evitar caer en una...</p>
-              <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                title="Como Evitar Estafas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <div class="card-body">
+                <h5 class="card-title">Como Seleccionar a un Contratista</h5>
+                <p class="card-text">En este video te explicamos que debes tener en cuenta al momento de seleccionar a un contratista.</p>
+                </div>
             </div>
-          </div>
 
-
-        <!--<div id="artVideo2" class="col">
-            <iframe class="videos" 
+            <div id="artVideo2" class="animate__animate animate__fadeInRight card text-white bg-dark mb-3">
+                <iframe class="videos" 
                 src="https://www.youtube.com/embed/tvgIhkfGGQg" 
                 title="Como Evitar Estafas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-        </div>-->
+                </iframe>
+                <div class="card-body">
+                <h5 class="card-title">Como Evitar Estafas</h5>
+                <p class="card-text">Manejarse a traves de recomendaciones es siempre una garantía porque las estafas no están ausentes en la prestación de servicios. Enterate sobre como evitar caer en una...</p>
+                </div>
+            </div>
 
+        </div>
 
+    </main>
 
-    </div>
+    
+    <footer>
 
-</main>
+        <a id="ayuda" href="../html/ayuda.html">¿COMO FUNCIONA?</a>
+        <p>Powered by Oscar Ziliotto</p>
+        <div id="redes">
+            <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconIGwhite.png" alt="Icono IG" dth="100" height="100"></a>
+            <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconFBwhite.png" alt="Icono IG" dth="100" height="100"></a>
+            <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconWAwhite.png" alt="Icono IG" dth="100" height="100"></a>
+        </div>
 
-<footer>
-    <a id="ayuda" href="../html/ayuda.html">¿COMO FUNCIONA?</a>
-    <p>Powered by Oscar Ziliotto</p>
-    <div id="redes">
-        <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconIGwhite.png" alt="Icono IG" dth="100" height="100"></a>
-        <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconFBwhite.png" alt="Icono IG" dth="100" height="100"></a>
-        <a href="https://www.instagram.com/"><img id="iconRedes" src="../img/iconWAwhite.png" alt="Icono IG" dth="100" height="100"></a>
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 </html>

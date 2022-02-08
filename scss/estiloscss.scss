@@ -36,29 +36,37 @@ ul{
     list-style-type: none; /*le quita las viñetas a las listas*/
 }
 
-h1{
-    color: $colorTitulo;
-    font-family: $fontH1;
-    text-shadow: 2px 2px 2px $shadowTexto;
-    font-size: 31px;
+@mixin formatoHaches ($color, $bgColor, $tamanioLetra, $font){
+    color:$color;
+    text-shadow: $bgColor;
+    font-size: $tamanioLetra;
+    font-family: $font;
     text-align: center;
     width: 100%;
 }
 
+h1{
+    @include formatoHaches ($colorTitulo, 2px 2px 2px $shadowTexto, 8vw, $fontH1);
+}
+
+h2{
+    @include formatoHaches ($colorTexto, 1px 1px 1px $shadowTexto, 6vw, $fontH2);
+    letter-spacing: 2px;
+}
+
 h3{
-    color: $colorTitulo;
-    font-family: $fontH3;
-    text-shadow: 2px 2px 2px $shadowTexto;
-    box-shadow: 0 0 50px -10px #000;
-    font-size: 25px;
-    width: 50%;
-    text-align: center;
+    @include formatoHaches ($colorTexto, 1px 1px 1px $shadowTexto, 5vw, $fontH3);
+}
+
+p{
+    @include formatoHaches ($colorTexto, 1px 1px 1px $shadowTexto, 1vw, $fontP);
 }
 
 fieldset legend{
     font-family: $fontH3;
     background: rgb(51, 51, 51);
     font-size:20px;
+    text-align: center;
 }
 
 
@@ -109,6 +117,11 @@ header{
 
 #hamburguesa{
     width: 55px;
+}
+
+#htmlActivo{
+    color:#75BF80;
+    font-weight: 600;
 }
 
 
@@ -182,6 +195,9 @@ footer{
         text-decoration: none;
         font-family:Arial;
         font-size:10px;
+        color: white;
+        width: 200px;
+        text-align: center;
     }
 
     p{
@@ -189,8 +205,6 @@ footer{
         margin: 0;
     }
 }
-
-
 
 #iconRedes{
     height: 18px;
@@ -201,7 +215,6 @@ footer{
 /* PROPIEDADES GENERALES PAGINA INDEX*/
 
 #bodyIndex{
-    background: url(../img/assistant.jpg) no-repeat;
     background-size:cover;
     background-repeat: no-repeat;
     background-position: 55% 5%;
@@ -209,6 +222,7 @@ footer{
     color: $colorTexto;
     justify-content: center;
     width: 100%;
+    background: url(../img/assistant.jpg) no-repeat;
 }
 
 #indexTitulos{
@@ -224,7 +238,7 @@ footer{
                             "A3 A3 A3 A3 A3"
                             "A5 A5 A5 A5 A5"
                             "A5 A5 A5 A5 A5"
-                            "A5 A5 A5 A5 A5";
+                            "A6 A6 A6 A6 A6";
     width: 100vw;
     height: 90vh;
 }
@@ -254,14 +268,12 @@ footer{
 }
 
 #slogan{
-    font-family: 'Roboto', sans-serif;
-    font-weight:bold;
-    text-align: center;
-    text-shadow: 1px 1px 1px $shadowTexto;
+    box-shadow: 0 0 50px -10px #000;
+    width: 50%;
     padding-top: 10px;
     width: 100%;
     height: 100px;
-    color: $colorTexto;
+    font-weight: bold;
 }
 
 #ingresoppal{
@@ -276,10 +288,10 @@ footer{
     align-items: center;
     font-family: 'Open Sans', sans-serif;
     width: 300px;
-    height: 250px;
+    height: 230px;
     text-align: center;
     justify-self: center;
-    align-self: center;
+    align-self:center;
 
     a{
         color: #75BF80;
@@ -301,7 +313,7 @@ footer{
     background: $shadowFondo;
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
@@ -319,7 +331,6 @@ footer{
 }
 
 #sliderUsuario{
-    grid-area: UM2;
     height: 120px;
 }
 
@@ -394,7 +405,7 @@ footer{
 /* PROPIEDADES GENERALES PAGINA USUARIOS*/
 
 #bodyUsuarios{
-    background: url(../img/conectados.png) repeat;
+    background: rgb(41, 40, 40);
     background-size: 30%;
     background-repeat: repeat;
     background-position: 50% 5%;
@@ -405,11 +416,11 @@ footer{
 #userMain{
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 25% 75%;
-    grid-template-areas:    "UM1"
+    grid-template-rows: 75% 25%;
+    grid-template-areas:    "UM1" 
                             "UM2";
     width: 100vw;
-    height: 100vh;
+    height: auto;
     align-items: center;
     justify-items: center;
 }
@@ -420,7 +431,7 @@ footer{
 }
 
 #solicitaPresupuesto{
-    grid-area: UM1;
+    grid-area: UM2;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -429,7 +440,7 @@ footer{
 }
 
 #recomienda{
-    grid-area: UM2;
+    grid-area: UM1;
     width: auto;
     height: 70%;
     display: flex;
@@ -440,16 +451,18 @@ footer{
 }
 
 .cuadrointeractivo{
-    background:#e6e6e6;
+    background:$shadowFondo;
     border-radius:8px;
+    border: 2px rgb(169, 169, 173) solid;
     box-shadow:0 0 40px -10px #000;
     padding:15px 25px;
     max-width:calc(100vw - 40px);
     font-family:'Montserrat',sans-serif;
-    color:#78788c;
+    color:#bdbdc0;
     font-size:14px;
     text-align: justify;
     justify-self: left;
+    align-self: stretch;
     transform: scale(0.7);
 }
 
@@ -475,7 +488,7 @@ footer{
 }
 
 #indexGaleria{
-    background-color:#e6e6e6;
+    background-color: $shadowFondo;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -483,17 +496,18 @@ footer{
     grid-template-areas:    "TIT TIT TIT"
                             "IG1 IG2 IG3"
                             "IG4 IG5 IG6";
+    padding-left: 10px;
 
     h2{
     grid-area: TIT;
-    color: #042844;
+    color: #797f85;
     align-self:flex-end;
     font-weight: 300;
     justify-self: center;
     font-family: $fontH2;
     font-size: 18px;
     letter-spacing: 0.5px;
-    text-align: center;
+    text-align: left;
     }
 
     div{
@@ -537,53 +551,38 @@ footer{
 }
 
 #imgIG2{
-    display: flex;
-    flex-direction: column;
+    @extend #imgIG1;
     grid-area: IG2;
     background: url(../img/piscina2.jpg) no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 #imgIG3{
-    display: flex;
-    flex-direction: column;
+    @extend #imgIG1;
     grid-area: IG3;
     background: url(../img/Parque.jpg) no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 #imgIG4{
-    display: flex;
-    flex-direction: column;
+    @extend #imgIG1;
     grid-area: IG4;
     background: url(../img/alambrado.jpg) no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 #imgIG5{
-    display: flex;
-    flex-direction: column;
+    @extend #imgIG1;
     grid-area: IG5;
     background: url(../img/muelle.jpg) no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 #imgIG6{
-    display: flex;
-    flex-direction: column;
+    @extend #imgIG1;
     grid-area: IG6;
     background: url(../img/limpieza3.jpg) no-repeat;
     background-size: cover;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -591,17 +590,18 @@ footer{
 
 #bodyArticulos{
     background: url(../img/cemento.jpg) no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
-    background-position: 50% 5%;
+    background-position: 55% 5%;
     background-attachment: fixed;
+    color: $colorTexto;
     justify-content: center;
 }
 
 #articleMain{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 45% 45%;
+    grid-template-rows: 80px 320px 320px;
     grid-template-areas:    "AM1"
                             "AM2"
                             "AM3";
@@ -632,7 +632,8 @@ footer{
 #artVideo2{
     grid-area: AM3;
     width: 90%;
-    height: 280px;
+    height: 280px;  
+
 
     div h5{
         font-size: 15px;  
@@ -645,7 +646,7 @@ footer{
 
 .videos{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 
@@ -660,10 +661,11 @@ footer{
     width: 100vw;
     height: 90vh;
     align-items: center;
+    justify-items: center;
 
     h3{
         grid-area: CM1;
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -706,6 +708,9 @@ footer{
     
     p{
         font-size: small;
+        text-align: justify;
+        text-shadow: none;
+        color:#6c6c7c;
     }
 }
 
@@ -739,7 +744,7 @@ footer{
     background: url(../img/trabajadores2.jpg) no-repeat;
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: 55% 0%;
+    background-position: 55% 5%;
     background-attachment: fixed;
     color: $colorTexto;
     justify-content: center;
@@ -770,6 +775,7 @@ footer{
 
 #notaPrestador{
     font-size: small;
+    text-align: justify;
 }
 
 
@@ -881,11 +887,15 @@ footer{
 /* PROPIEDADES GENERALES RESPONSIVE DESKTOP*/
 
     h1{
-        font-size: 44px;
+        @include formatoHaches ($colorTitulo, 2px 2px 2px $shadowTexto, 4.5vw, $fontH1);
     }
-    
+
+    h2{
+        @include formatoHaches ($colorTexto, 1px 1px 1px $shadowTexto, 40px, $fontH2);
+    }
+
     h3{
-        Font-size: 35px;
+        @include formatoHaches ($colorTexto, 1px 1px 1px $shadowTexto, 30px, $fontH3);
     }
 
 
@@ -1069,10 +1079,14 @@ footer{
     #iconRedes{
         height: 27px;
         width: 27px;
+
+        &:hover{
+            transform: scale(1.5);
+        }
     }
 
     #redes{
-        width: 100px;
+        width: 150px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1098,13 +1112,12 @@ footer{
                                 "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
                                 "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
                                 "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5"
-                                "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5";
+                                "A6 A6 A6 A6 A6 A6 A6 A6 A6 A6";
         width: 100vw;
         height: 90vh;
     }
 
     #presentacion{
-        padding-top: 20px;
         grid-area: A3;
         display: flex;
         flex-direction: column;
@@ -1112,7 +1125,7 @@ footer{
         align-self:center;
         justify-content: space-evenly;
         align-items: center;
-        width: 80%;
+        width: 90%;
         height: 80%;
     }
 
@@ -1122,13 +1135,8 @@ footer{
     }
 
     #slogan{
-        font-family: 'Roboto', sans-serif;
-        font-weight:bold;
-        text-align: center;
-        padding-top: 10px;
-        width: 100%;
-        height: 100px;
-        color: $colorTexto;
+        box-shadow: none;
+        width: 80%;
     }
 
     #inputLogin:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
@@ -1136,14 +1144,27 @@ footer{
 
 /*PROPIEDADES RESPONSIVE DESKTOP DE LA PAGINA USUARIOS*/
 
+    #userMain{
+        display:grid;
+        padding: 50px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-template-areas: "UM1 UM2";
+        width: 100vw;
+        height: 700px;
+        align-items: center;
+        justify-items: center;
+    }
+
     #indexGaleria{
-        padding: 10px 100px 10px 100px;
+        padding: 50px;
         row-gap: 15px;
         column-gap: 15px;
 
         h2{
-            font-size: 30px;
+            font-size: 25px;
             letter-spacing: 0.5px;
+            background-color: rgba(216, 208, 208, 0.20);
         }
 
         div h4{
@@ -1171,16 +1192,34 @@ footer{
 
 /* PROPIEDADES RESPONSIVE DESKTOP DE PAGINA ARTICULOS*/
 
-    #artVideo1{
-        width: 600px;
-        height: 300px;
-    }
+#artVideo1{
+    grid-area: AM2;
+    width: 600px;
+    height: auto;  
 
-    #artVideo2{
-        width: 600px;
-        height: 300px;
+    div h5{
+        font-size: 15px;  
     }
     
+    div p{
+        font-size: 13px;  
+    }
+}
+
+#artVideo2{
+    grid-area: AM3;
+    width: 600px;
+    height: auto; 
+
+    div h5{
+        font-size: 15px;  
+    }
+    
+    div p{
+        font-size: 13px;  
+    }
+}
+  
 
 /*PROPIEDADES RESPONSIVE DESKTOP DE PAGINA CONTACTO*/
 
@@ -1195,7 +1234,7 @@ footer{
         background-color: rgb(51, 51, 51);
         align-items: center;
 
-        h3{
+        h2{
             grid-area: CM1;
             width: 100%;
         }
@@ -1215,7 +1254,7 @@ footer{
         box-shadow:0 0 40px -10px #000;
         margin:calc(50vh - 220px) auto;
         padding:20px 30px;
-        max-width:calc(100vw - 40px);
+        max-width:calc(60vw - 40px);
         font-family:'Montserrat',sans-serif;
         color:#78788c;
         font-size:14px;
@@ -1234,7 +1273,7 @@ footer{
     
     #inputContacto{
         width:100%;
-        padding:10px;
+        padding:5px;
         box-sizing:border-box;
         background:none;
         outline:none;
@@ -1264,7 +1303,7 @@ footer{
     }
     
     .cuadrointeractivo{
-        transform: scale(1.00);
+        transform: scale(0.85);
     }
 
 

@@ -29,25 +29,42 @@ ul {
 
 h1 {
   color: #d3b407;
-  font-family: "Bakbak One", cursive;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
-  font-size: 31px;
+  font-size: 8vw;
+  font-family: "Bakbak One", cursive;
   text-align: center;
   width: 100%; }
 
+h2 {
+  color: #f8f8f2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+  font-size: 6vw;
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 2px; }
+
 h3 {
-  color: #d3b407;
-  font-family: "Bakbak One", cursive;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 50px -10px #000;
-  font-size: 25px;
-  width: 50%;
-  text-align: center; }
+  color: #f8f8f2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+  font-size: 5vw;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  width: 100%; }
+
+p {
+  color: #f8f8f2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+  font-size: 1vw;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  width: 100%; }
 
 fieldset legend {
-  font-family: "Bakbak One", cursive;
+  font-family: "Roboto", sans-serif;
   background: #333333;
-  font-size: 20px; }
+  font-size: 20px;
+  text-align: center; }
 
 .btn {
   display: inline-block;
@@ -153,6 +170,10 @@ header {
 #hamburguesa {
   width: 55px; }
 
+#htmlActivo {
+  color: #75BF80;
+  font-weight: 600; }
+
 /*PROPIEDADES GENERALES DEL BUSCADOR*/
 #buscador {
   /*formato del contenedor de búsqueda*/
@@ -204,7 +225,7 @@ button {
 footer {
   background-color: rgba(14, 24, 31, 0.7);
   /*fondo de header gris oscuro*/
-  color: beige;
+  color: #f8f8f2;
   padding: 10px;
   font-family: Arial;
   position: relative;
@@ -219,7 +240,10 @@ footer {
   footer a {
     text-decoration: none;
     font-family: Arial;
-    font-size: 10px; }
+    font-size: 10px;
+    color: white;
+    width: 200px;
+    text-align: center; }
   footer p {
     font-size: 10px;
     margin: 0; }
@@ -230,20 +254,20 @@ footer {
 
 /* PROPIEDADES GENERALES PAGINA INDEX*/
 #bodyIndex {
-  background: url(../img/assistant.jpg) no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 55% 5%;
   background-attachment: fixed;
-  color: beige;
+  color: #f8f8f2;
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+  background: url(../img/assistant.jpg) no-repeat; }
 
 #indexTitulos {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  grid-template-areas: "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A5 A5 A5 A5 A5" "A5 A5 A5 A5 A5" "A5 A5 A5 A5 A5";
+  grid-template-areas: "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A3 A3 A3 A3 A3" "A5 A5 A5 A5 A5" "A5 A5 A5 A5 A5" "A6 A6 A6 A6 A6";
   width: 100vw;
   height: 90vh; }
 
@@ -267,17 +291,15 @@ footer {
   font-size: 13.9px;
   width: 100%;
   height: 200px;
-  color: beige; }
+  color: #f8f8f2; }
 
 #slogan {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 50px -10px #000;
+  width: 50%;
   padding-top: 10px;
   width: 100%;
   height: 100px;
-  color: beige; }
+  font-weight: bold; }
 
 #ingresoppal {
   transform: scale(0.8);
@@ -292,7 +314,7 @@ footer {
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   width: 300px;
-  height: 250px;
+  height: 230px;
   text-align: center;
   justify-self: center;
   align-self: center; }
@@ -313,7 +335,7 @@ footer {
   background: rgba(0, 0, 0, 0.5);
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -329,7 +351,6 @@ footer {
     box-shadow: inset 0 -5px 45px rgba(163, 162, 162, 0.4), 0 1px 1px rgba(255, 255, 255, 0.356); }
 
 #sliderUsuario {
-  grid-area: UM2;
   height: 120px; }
 
 .slider {
@@ -393,7 +414,7 @@ footer {
 
 /* PROPIEDADES GENERALES PAGINA USUARIOS*/
 #bodyUsuarios {
-  background: url(../img/conectados.png) repeat;
+  background: #292828;
   background-size: 30%;
   background-repeat: repeat;
   background-position: 50% 5%;
@@ -403,10 +424,10 @@ footer {
 #userMain {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 25% 75%;
-  grid-template-areas: "UM1" "UM2";
+  grid-template-rows: 75% 25%;
+  grid-template-areas: "UM1"  "UM2";
   width: 100vw;
-  height: 100vh;
+  height: auto;
   align-items: center;
   justify-items: center; }
 
@@ -415,7 +436,7 @@ footer {
   animation-duration: 1s; }
 
 #solicitaPresupuesto {
-  grid-area: UM1;
+  grid-area: UM2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -423,7 +444,7 @@ footer {
   height: 60%; }
 
 #recomienda {
-  grid-area: UM2;
+  grid-area: UM1;
   width: auto;
   height: 70%;
   display: flex;
@@ -433,16 +454,18 @@ footer {
   transform: scale(1.1); }
 
 .cuadrointeractivo {
-  background: #e6e6e6;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  border: 2px #a9a9ad solid;
   box-shadow: 0 0 40px -10px #000;
   padding: 15px 25px;
   max-width: calc(100vw - 40px);
   font-family: 'Montserrat',sans-serif;
-  color: #78788c;
+  color: #bdbdc0;
   font-size: 14px;
   text-align: justify;
   justify-self: left;
+  align-self: stretch;
   transform: scale(0.7); }
 
 #recomiendadatos {
@@ -463,22 +486,23 @@ footer {
   font-size: small; }
 
 #indexGaleria {
-  background-color: #e6e6e6;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 70px 200px 200px;
-  grid-template-areas: "TIT TIT TIT" "IG1 IG2 IG3" "IG4 IG5 IG6"; }
+  grid-template-areas: "TIT TIT TIT" "IG1 IG2 IG3" "IG4 IG5 IG6";
+  padding-left: 10px; }
   #indexGaleria h2 {
     grid-area: TIT;
-    color: #042844;
+    color: #797f85;
     align-self: flex-end;
     font-weight: 300;
     justify-self: center;
-    font-family: "Bakbak One", cursive;
+    font-family: "Anton", sans-serif;
     font-size: 18px;
     letter-spacing: 0.5px;
-    text-align: center; }
+    text-align: left; }
   #indexGaleria div h4 {
     color: rgba(255, 255, 255, 0.842);
     font-size: 12px;
@@ -500,7 +524,7 @@ footer {
       background-color: rgba(0, 0, 0, 0.5);
       color: #e6e6e6; }
 
-#imgIG1 {
+#imgIG1, #imgIG2, #imgIG3, #imgIG4, #imgIG5, #imgIG6 {
   display: flex;
   flex-direction: column;
   grid-area: IG1;
@@ -510,63 +534,44 @@ footer {
   justify-content: center; }
 
 #imgIG2 {
-  display: flex;
-  flex-direction: column;
   grid-area: IG2;
   background: url(../img/piscina2.jpg) no-repeat;
-  background-size: cover;
-  align-items: center;
-  justify-content: center; }
+  background-size: cover; }
 
 #imgIG3 {
-  display: flex;
-  flex-direction: column;
   grid-area: IG3;
   background: url(../img/Parque.jpg) no-repeat;
-  background-size: cover;
-  align-items: center;
-  justify-content: center; }
+  background-size: cover; }
 
 #imgIG4 {
-  display: flex;
-  flex-direction: column;
   grid-area: IG4;
   background: url(../img/alambrado.jpg) no-repeat;
-  background-size: cover;
-  align-items: center;
-  justify-content: center; }
+  background-size: cover; }
 
 #imgIG5 {
-  display: flex;
-  flex-direction: column;
   grid-area: IG5;
   background: url(../img/muelle.jpg) no-repeat;
-  background-size: cover;
-  align-items: center;
-  justify-content: center; }
+  background-size: cover; }
 
 #imgIG6 {
-  display: flex;
-  flex-direction: column;
   grid-area: IG6;
   background: url(../img/limpieza3.jpg) no-repeat;
-  background-size: cover;
-  align-items: center;
-  justify-content: center; }
+  background-size: cover; }
 
 /* PROPIEDADES GENERALES DE PAGINA ARTICULOS*/
 #bodyArticulos {
   background: url(../img/cemento.jpg) no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 5%;
+  background-position: 55% 5%;
   background-attachment: fixed;
+  color: #f8f8f2;
   justify-content: center; }
 
 #articleMain {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 45% 45%;
+  grid-template-rows: 80px 320px 320px;
   grid-template-areas: "AM1" "AM2" "AM3";
   width: 100vw;
   height: 90vh;
@@ -595,7 +600,7 @@ footer {
 
 .videos {
   width: 100%;
-  height: 100%; }
+  height: auto; }
 
 /*PROPIEDADES GENERALES DE PAGINA CONTACTO*/
 #contactMain {
@@ -605,10 +610,11 @@ footer {
   grid-template-areas: "CM1" "CM3";
   width: 100vw;
   height: 90vh;
-  align-items: center; }
+  align-items: center;
+  justify-items: center; }
   #contactMain h3 {
     grid-area: CM1;
-    width: 100%; }
+    width: 80%; }
 
 #bodyContacto {
   background-color: #333333;
@@ -642,7 +648,10 @@ footer {
     color: #6c6c7c;
     font-size: 25px; }
   #contacto p {
-    font-size: small; }
+    font-size: small;
+    text-align: justify;
+    text-shadow: none;
+    color: #6c6c7c; }
 
 #inputContacto {
   width: 100%;
@@ -670,9 +679,9 @@ footer {
   background: url(../img/trabajadores2.jpg) no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 55% 0%;
+  background-position: 55% 5%;
   background-attachment: fixed;
-  color: beige;
+  color: #f8f8f2;
   justify-content: center;
   width: 100%; }
 
@@ -695,7 +704,8 @@ footer {
   width: 100%; }
 
 #notaPrestador {
-  font-size: small; }
+  font-size: small;
+  text-align: justify; }
 
 /*PROPIEDADES GENERALES PAGINA REGISTRO*/
 #bodyAyuda {
@@ -763,7 +773,7 @@ footer {
   font-family: 'Roboto', sans-serif;
   height: auto;
   text-align: center;
-  color: beige; }
+  color: #f8f8f2; }
 
 .videoFondo {
   position: fixed;
@@ -781,9 +791,26 @@ footer {
   /*CONDICIONES TABLET&+*/
   /* PROPIEDADES GENERALES RESPONSIVE DESKTOP*/
   h1 {
-    font-size: 44px; }
+    color: #d3b407;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+    font-size: 4.5vw;
+    font-family: "Bakbak One", cursive;
+    text-align: center;
+    width: 100%; }
+  h2 {
+    color: #f8f8f2;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    font-size: 40px;
+    font-family: "Anton", sans-serif;
+    text-align: center;
+    width: 100%; }
   h3 {
-    Font-size: 35px; }
+    color: #f8f8f2;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    width: 100%; }
   /* PROPIEDADES RESPONSIVE DESKTOP DEL ENCABEZADO*/
   header {
     padding: 0 15px 0 15px; }
@@ -938,8 +965,10 @@ footer {
   #iconRedes {
     height: 27px;
     width: 27px; }
+    #iconRedes:hover {
+      transform: scale(1.5); }
   #redes {
-    width: 100px;
+    width: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
@@ -950,11 +979,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    grid-template-areas: "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5";
+    grid-template-areas: "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A1 A1 A2 A2 A3 A3 A3 A3 A3 A3" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A4 A4 A2 A2 A5 A5 A5 A5 A5 A5" "A6 A6 A6 A6 A6 A6 A6 A6 A6 A6";
     width: 100vw;
     height: 90vh; }
   #presentacion {
-    padding-top: 20px;
     grid-area: A3;
     display: flex;
     flex-direction: column;
@@ -962,29 +990,35 @@ footer {
     align-self: center;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 90%;
     height: 80%; }
   #textoppal {
     letter-spacing: 0.5px;
     width: 90%; }
   #slogan {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 10px;
-    width: 100%;
-    height: 100px;
-    color: beige; }
+    box-shadow: none;
+    width: 80%; }
   #inputLogin:focus {
     box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2); }
   /*PROPIEDADES RESPONSIVE DESKTOP DE LA PAGINA USUARIOS*/
+  #userMain {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "UM1 UM2";
+    width: 100vw;
+    height: 700px;
+    align-items: center;
+    justify-items: center; }
   #indexGaleria {
-    padding: 10px 100px 10px 100px;
+    padding: 50px;
     row-gap: 15px;
     column-gap: 15px; }
     #indexGaleria h2 {
-      font-size: 30px;
-      letter-spacing: 0.5px; }
+      font-size: 25px;
+      letter-spacing: 0.5px;
+      background-color: rgba(216, 208, 208, 0.2); }
     #indexGaleria div h4 {
       color: rgba(0, 0, 0, 0);
       text-shadow: none;
@@ -1000,11 +1034,21 @@ footer {
     letter-spacing: 2px; }
   /* PROPIEDADES RESPONSIVE DESKTOP DE PAGINA ARTICULOS*/
   #artVideo1 {
+    grid-area: AM2;
     width: 600px;
-    height: 300px; }
+    height: auto; }
+    #artVideo1 div h5 {
+      font-size: 15px; }
+    #artVideo1 div p {
+      font-size: 13px; }
   #artVideo2 {
+    grid-area: AM3;
     width: 600px;
-    height: 300px; }
+    height: auto; }
+    #artVideo2 div h5 {
+      font-size: 15px; }
+    #artVideo2 div p {
+      font-size: 13px; }
   /*PROPIEDADES RESPONSIVE DESKTOP DE PAGINA CONTACTO*/
   #contactMain {
     display: grid;
@@ -1015,7 +1059,7 @@ footer {
     height: 90vh;
     background-color: #333333;
     align-items: center; }
-    #contactMain h3 {
+    #contactMain h2 {
       grid-area: CM1;
       width: 100%; }
   #imgcontacto {
@@ -1030,7 +1074,7 @@ footer {
     box-shadow: 0 0 40px -10px #000;
     margin: calc(50vh - 220px) auto;
     padding: 20px 30px;
-    max-width: calc(100vw - 40px);
+    max-width: calc(60vw - 40px);
     font-family: 'Montserrat',sans-serif;
     color: #78788c;
     font-size: 14px;
@@ -1045,7 +1089,7 @@ footer {
       font-size: 25px; }
   #inputContacto {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
     background: none;
     outline: none;
@@ -1067,7 +1111,7 @@ footer {
     width: 50%;
     grid-area: CM2; }
   .cuadrointeractivo {
-    transform: scale(1); }
+    transform: scale(0.85); }
   /* PROPIEDADES RESPONSIVE DESKTOP PAGINA AYUDA*/
   #funcionamiento p {
     font-size: 20px;
